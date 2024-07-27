@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="sticky top-0 flex justify-between items-center text-neutral-200 pt-5 relative">
+      <div className="sticky top-0 flex justify-between items-center text-neutral-200 pt-5 relative z-50">
         <Image src="/kc.png" width={70} height={70} alt="Logo" />
         <button className="text-[20px] font-bold" onClick={toggleMenu}>
           {isOpen ? (
@@ -40,6 +40,7 @@ export default function Header() {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className={`absolute top-16 right-0 w-full lg:w-[300px] bg-blue-800 text-white rounded-xl shadow-lg z-50 flex flex-col items-start p-6`}
+          style={{ zIndex: 1000 }} // Add this line
         >
           <Link href="#Home" className="mb-4">
             <motion.a
