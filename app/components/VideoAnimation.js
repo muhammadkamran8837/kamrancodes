@@ -41,7 +41,7 @@ export default function VideoAnimation() {
   );
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center lg:mt-0 mt-[-60px]">
       <motion.div
         ref={ref}
         style={{ opacity: opacityAnim, scale: scaleAnim }}
