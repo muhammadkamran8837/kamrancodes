@@ -9,7 +9,7 @@ export default function HeroSection() {
       <button className="mb-5 bg-blue-800 text-white rounded-2xl shadow-md shadow-neutral-200 px-2 py-1 ">
         Open to Projects 🚀
       </button>
-      <h1 className="lg:text-6xl text-3xl font-extrabold mb-4 text-center lg:w-[60vw] ">
+      <h1 className="lg:text-5xl text-3xl font-black mb-4 text-center lg:w-[64vw] ">
         Transforming Ideas into Reality,
         <span className="text-blue-800">
           Your Go-To Expert for Web and App Development

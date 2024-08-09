@@ -4,7 +4,6 @@ import ChevronRight from "../components/Elements/ChevronRight";
 import ChevronDown from "../components/Elements/ChevronDown";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import VerticalLine from "../components/Elements/VerticalLine";
 
 const Layout = ({ children }) => {
   const router = useRouter();

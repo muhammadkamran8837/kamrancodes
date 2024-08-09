@@ -56,28 +56,28 @@ export default function AppDevelopment() {
 
         <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
       </div>
-      {SelectedComponent ? (
-        <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
+        {SelectedComponent ? (
           <div className="flex-grow overflow-y-auto scrollbar-hide ">
             <SelectedComponent />
           </div>
-        </Suspense>
-      ) : (
-        <div className="flex-grow flex items-center justify-center">
-          <div className="flex flex-col items-center text-center text-neutral-400">
-            <Image
-              src="/appIllustration.png"
-              width={200}
-              height={200}
-              alt="Logo"
-            />
-            <p className="text-xs mt-4">
-              Please select a project from the sidebar to view specific
-              projects.
-            </p>
+        ) : (
+          <div className="flex-grow flex items-center justify-center">
+            <div className="flex flex-col items-center text-center text-neutral-400">
+              <Image
+                src="/appIllustration.png"
+                width={200}
+                height={200}
+                alt="Logo"
+              />
+              <p className="text-xs mt-4">
+                Please select a project from the sidebar to view specific
+                projects.
+              </p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </Suspense>
     </div>
   );
 }
