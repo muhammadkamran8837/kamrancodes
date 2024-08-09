@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import useWindowSize from "../hooks/useWindowSize";
+import Link from "next/link";
 
 export default function MyWork() {
   const controls = useAnimation();
@@ -102,7 +103,7 @@ export default function MyWork() {
           }}
           className="mb-5 bg-blue-800 text-white rounded-2xl shadow-md shadow-slate-600 px-2 py-1 "
         >
-          See Projects
+          <Link href="/projects/"> See Projects</Link>
         </motion.button>
       </div>
     </div>

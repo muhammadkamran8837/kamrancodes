@@ -42,54 +42,54 @@ export default function Header() {
           className={`absolute top-16 right-0 w-full lg:w-[300px] bg-blue-800 text-white rounded-xl shadow-lg z-50 flex flex-col items-start p-6`}
           style={{ zIndex: 1000 }} // Add this line
         >
-          <Link href="#Home" className="mb-4">
-            <motion.a
+          <Link href="#Home">
+            <motion.div
               whileHover={{ x: 20, scale: 1.1 }} // Scale on hover
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="text-[30px] font-bold mb-4"
             >
               Home
-            </motion.a>
+            </motion.div>
           </Link>
 
-          <Link href="#Services" className="mb-4">
-            <motion.a
+          <Link href="#Services">
+            <motion.div
               whileHover={{ x: 20, scale: 1.1 }} // Scale on hover
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="text-[30px] font-bold"
+              className="text-[30px] font-bold mb-4"
             >
               Services
-            </motion.a>
+            </motion.div>
           </Link>
 
-          <Link href="#Projects" className="mb-4">
-            <motion.a
+          <Link href="#Projects">
+            <motion.div
               whileHover={{ x: 20, scale: 1.1 }} // Scale on hover
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="text-[30px] font-bold mb-4"
             >
               Projects
-            </motion.a>
+            </motion.div>
           </Link>
 
-          <Link href="#Testimonials" className="mb-4">
-            <motion.a
+          <Link href="#Testimonials">
+            <motion.div
               whileHover={{ x: 20, scale: 1.1 }} // Scale on hover
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="text-[30px] font-bold mb-4"
             >
               Testimonials
-            </motion.a>
+            </motion.div>
           </Link>
 
-          <Link href="#Contact" className="mb-4">
-            <motion.a
+          <Link href="#Contact">
+            <motion.div
               whileHover={{ x: 20, scale: 1.1 }} // Scale on hover
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="text-[30px] font-bold mb-4"
+              className="text-[30px] font-bold"
             >
               Contact
-            </motion.a>
+            </motion.div>
           </Link>
 
           <div className="flex flex-col lg:mt-20 mt-[100px] space-y-4">
