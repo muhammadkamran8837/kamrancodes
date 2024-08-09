@@ -1,27 +1,29 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import CryptoApp from "./CryptoApp";
 import EcommerceApp from "./EcommerceApp";
 import SignatureApp from "./SignatureApp";
 import WeatherApp from "./WeatherApp";
 import Image from "next/image";
-import ChevronRight from "@/app/components/Elements/ChevronRight";
+
 const componentMap = {
   CryptoApp: CryptoApp,
   EcommerceApp: EcommerceApp,
   SignatureApp: SignatureApp,
   WeatherApp: WeatherApp,
 };
+
 const projectDescription = {
   CryptoApp: "Crypto app ",
   EcommerceApp: "ecommerce app",
   SignatureApp: "signature app",
   WeatherApp: "Weather app",
 };
+
 const projectNames = {
   CryptoApp: "Crypto App",
-  EcommerceApp: "EcommerceApp",
+  EcommerceApp: "Ecommerce App",
   SignatureApp: "Signature App",
   WeatherApp: "Weather App",
 };
@@ -39,12 +41,12 @@ export default function WebDevelopment() {
         <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
           Web Development
           {selectedProjectName && (
-            <span className="ml-2 mr-2 font-thin">{">"}</span>
-          )}
-          {selectedProjectName && (
-            <span className="font-normal text-sky-300">
-              {selectedProjectName}
-            </span>
+            <>
+              <span className="ml-2 mr-2 font-thin">{">"}</span>
+              <span className="font-normal text-sky-300">
+                {selectedProjectName}
+              </span>
+            </>
           )}
         </h1>
         <p className="text-xs text-neutral-400">
@@ -55,9 +57,11 @@ export default function WebDevelopment() {
         <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
       </div>
       {SelectedComponent ? (
-        <div className="flex-grow">
-          <SelectedComponent />
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="flex-grow">
+            <SelectedComponent />
+          </div>
+        </Suspense>
       ) : (
         <div className="flex-grow flex items-center justify-center">
           <div className="flex flex-col items-center text-center text-neutral-400">

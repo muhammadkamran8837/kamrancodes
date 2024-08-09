@@ -1,23 +1,27 @@
 "use client";
+
 import { useSearchParams } from "next/navigation";
 import ArtifyApp from "./ArtifyApp";
 import ChatApp from "./ChatApp";
 import CosmeticsRecommendation from "./CosmeticsRecommendation";
 import Image from "next/image";
+import React, { Suspense } from "react";
 
 const componentMap = {
   ArtifyApp: ArtifyApp,
   ChatApp: ChatApp,
   CosmeticsRecommendation: CosmeticsRecommendation,
 };
+
 const projectNames = {
   ArtifyApp: "Artify App",
   ChatApp: "Chat App",
   CosmeticsRecommendation: "BeautyBuddyAI",
 };
+
 const projectDescription = {
   ArtifyApp:
-    "Artify App is platform for artists & fashion lovers. Artists can post arts, sell arts, take part in exhibitions and compititions ",
+    "Artify App is platform for artists & fashion lovers. Artists can post arts, sell arts, take part in exhibitions and competitions",
   ChatApp:
     "ChatApp is a real-time messaging application using websockets for communication. Allows One-on-One & Group Chat and News Feed",
   CosmeticsRecommendation:
@@ -53,9 +57,11 @@ export default function AppDevelopment() {
         <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
       </div>
       {SelectedComponent ? (
-        <div className="flex-grow overflow-y-auto scrollbar-hide ">
-          <SelectedComponent />
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="flex-grow overflow-y-auto scrollbar-hide ">
+            <SelectedComponent />
+          </div>
+        </Suspense>
       ) : (
         <div className="flex-grow flex items-center justify-center">
           <div className="flex flex-col items-center text-center text-neutral-400">
