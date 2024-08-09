@@ -36,27 +36,28 @@ export default function WebDevelopment() {
   const selectedProjectDescription = projectDescription[selectedComponent];
 
   return (
-    <div className="flex flex-col h-full">
-      <div>
-        <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
-          Web Development
-          {selectedProjectName && (
-            <>
-              <span className="ml-2 mr-2 font-thin">{">"}</span>
-              <span className="font-normal text-sky-300">
-                {selectedProjectName}
-              </span>
-            </>
-          )}
-        </h1>
-        <p className="text-xs text-neutral-400">
-          React.js | Node.js | Express.js | MongoDB OR Firebase | Next.js |
-          Tailwindcss
-        </p>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="flex flex-col h-full">
+        <div>
+          <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
+            Web Development
+            {selectedProjectName && (
+              <>
+                <span className="ml-2 mr-2 font-thin">{">"}</span>
+                <span className="font-normal text-sky-300">
+                  {selectedProjectName}
+                </span>
+              </>
+            )}
+          </h1>
+          <p className="text-xs text-neutral-400">
+            React.js | Node.js | Express.js | MongoDB OR Firebase | Next.js |
+            Tailwindcss
+          </p>
 
-        <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
-      </div>
-      <Suspense fallback={<div>Loading...</div>}>
+          <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
+        </div>
+
         {SelectedComponent ? (
           <div className="flex-grow">
             <SelectedComponent />
@@ -72,7 +73,7 @@ export default function WebDevelopment() {
             </div>
           </div>
         )}
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }

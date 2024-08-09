@@ -37,26 +37,27 @@ export default function AppDevelopment() {
   const selectedProjectDescription = projectDescription[selectedComponent];
 
   return (
-    <div className="flex flex-col h-full">
-      <div>
-        <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
-          App Development
-          {selectedProjectName && (
-            <span className="ml-2 mr-2 font-thin">{">"}</span>
-          )}
-          {selectedProjectName && (
-            <span className="font-normal text-sky-300">
-              {selectedProjectName}
-            </span>
-          )}
-        </h1>
-        <p className="text-xs text-neutral-400">
-          React Native | Node.js | Express.js | MongoDB OR Firebase | FastAPI
-        </p>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="flex flex-col h-full">
+        <div>
+          <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
+            App Development
+            {selectedProjectName && (
+              <span className="ml-2 mr-2 font-thin">{">"}</span>
+            )}
+            {selectedProjectName && (
+              <span className="font-normal text-sky-300">
+                {selectedProjectName}
+              </span>
+            )}
+          </h1>
+          <p className="text-xs text-neutral-400">
+            React Native | Node.js | Express.js | MongoDB OR Firebase | FastAPI
+          </p>
 
-        <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
-      </div>
-      <Suspense fallback={<div>Loading...</div>}>
+          <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
+        </div>
+
         {SelectedComponent ? (
           <div className="flex-grow overflow-y-auto scrollbar-hide ">
             <SelectedComponent />
@@ -77,7 +78,7 @@ export default function AppDevelopment() {
             </div>
           </div>
         )}
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }
