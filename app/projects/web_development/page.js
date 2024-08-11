@@ -54,7 +54,7 @@ export default function WebDevelopment() {
             React.js | Node.js | Express.js | MongoDB OR Firebase | Next.js |
             Tailwindcss
           </p>
-          <p className="text-sm mt-10 md:mt-3 mb-3 md:mb-1">
+          <p className="text-sm mt-5 md:mt-3 mb-3 md:mb-1">
             {selectedProjectDescription}
           </p>
         </div>
