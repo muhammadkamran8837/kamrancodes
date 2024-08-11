@@ -39,7 +39,7 @@ export default function ArtifyApp() {
             width={400}
             height={800} // Adjusted height to accommodate mobile screenshots
             src={src}
-            className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
             alt={`Artify screenshot ${index + 1}`}
           />
         </div>

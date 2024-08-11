@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Imonkeyss() {
   return (
-    <div className="flex justify-center flex-col items-center w-full">
+    <div className="flex flex-col justify-center items-center w-full">
       <div className="relative w-[100%] group">
         <Image
           src="/imonkeyss.png" // Replace with the correct path to your image
@@ -13,7 +13,7 @@ export default function Imonkeyss() {
           layout="responsive"
           width={600}
           height={450}
-          className="object-cover w-full h-auto opacity-50 rounded-lg transition-opacity duration-300 group-hover:opacity-70"
+          className="object-cover w-full h-auto md:opacity-90 rounded-md transition-opacity duration-300 group-hover:opacity-100"
         />
         <a
           href="https://imonkeyss.com/" // Replace with the correct URL

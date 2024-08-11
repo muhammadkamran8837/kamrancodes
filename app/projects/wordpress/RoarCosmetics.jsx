@@ -13,7 +13,7 @@ export default function RoarCosmetics() {
           layout="responsive"
           width={600}
           height={450}
-          className="object-cover w-full h-auto opacity-50 rounded-lg transition-opacity duration-300 group-hover:opacity-70"
+          className="object-cover w-full h-auto md:opacity-90 rounded-md transition-opacity duration-300 group-hover:opacity-100"
         />
         <a
           href="https://roarcosmetics.com/" // Replace with the correct URL

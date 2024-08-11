@@ -22,7 +22,7 @@ export default function CosmeticsRecommendation() {
             width={400}
             height={500}
             src={src}
-            className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
             alt={`Cosmetics app screenshot ${index + 1}`}
           />
         </div>
