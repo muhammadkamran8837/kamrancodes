@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SkeletonImage from "@/app/components/Elements/SkeletonImage";
 import React from "react";
 
 const screenshots = [
@@ -31,18 +31,13 @@ export default function ArtifyApp() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
       {screenshots.map((src, index) => (
-        <div
+        <SkeletonImage
           key={index}
-          className="rounded overflow-hidden shadow-lg transition-opacity duration-300"
-        >
-          <Image
-            width={400}
-            height={800} // Adjusted height to accommodate mobile screenshots
-            src={src}
-            className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-            alt={`Artify screenshot ${index + 1}`}
-          />
-        </div>
+          src={src}
+          alt={`Artify screenshot ${index + 1}`}
+          width={400}
+          height={800} // Adjusted height to accommodate mobile screenshots
+        />
       ))}
     </div>
   );

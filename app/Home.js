@@ -11,7 +11,7 @@ import VideoAnimation from "./components/VideoAnimation";
 export default function Home() {
   return (
     <>
-      <div className="bg-custom-gradient overflow-hidden lg:overflow-visible">
+      <div className="bg-custom-gradient lg:overflow-visible">
         <div className="container">
           <Header />
           <HeroSection />
