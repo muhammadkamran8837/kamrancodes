@@ -37,7 +37,7 @@ export default function WebDevelopment() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col lg:h-full h-[90vh]">
         <div>
           <h1 className="text-xl mb-1 font-bold flex flex-row items-start">
             Web Development
