@@ -4,7 +4,7 @@ import React from "react";
 const screenshots = [
   "/artify0.jpeg",
   "/artify1.jpeg",
-  "/artify2.jpeg ",
+  "/artify2.jpeg",
   "/artify3.jpeg",
   "/artify4.jpeg",
   "/artify5.jpeg",
@@ -29,7 +29,7 @@ const screenshots = [
 
 export default function ArtifyApp() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
       {screenshots.map((src, index) => (
         <div
           key={index}
@@ -37,10 +37,10 @@ export default function ArtifyApp() {
         >
           <Image
             width={400}
-            height={500}
+            height={800} // Adjusted height to accommodate mobile screenshots
             src={src}
-            className="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity duration-300"
-            alt=""
+            className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            alt={`Artify screenshot ${index + 1}`}
           />
         </div>
       ))}

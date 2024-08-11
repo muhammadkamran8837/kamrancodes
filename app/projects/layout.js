@@ -4,6 +4,8 @@ import ChevronRight from "../components/Elements/ChevronRight";
 import ChevronDown from "../components/Elements/ChevronDown";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import MenuIcon from "../components/Elements/MenuIcon";
+import CloseIcon from "../components/Elements/CloseIcon";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -23,6 +25,10 @@ const Layout = ({ children }) => {
   const handleProjectClick = (category, component) => {
     setSelectedProject(component);
     router.push(`/projects/${category}?project=${component}`);
+    // Automatically close the sidebar on mobile view
+    if (window.innerWidth < 768) {
+      setIsSidebarOpen(false);
+    }
   };
 
   return (
@@ -30,8 +36,8 @@ const Layout = ({ children }) => {
       {/* Hamburger Menu for Mobile */}
       <div className="md:hidden p-4 bg-slate-900 flex justify-between items-center">
         <div className="font-bold text-xl">Projects</div>
-        <button onClick={toggleSidebar} className="text-white">
-          {isSidebarOpen ? "Close" : "Menu"}
+        <button onClick={toggleSidebar} className="text-white z-50">
+          {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
 
