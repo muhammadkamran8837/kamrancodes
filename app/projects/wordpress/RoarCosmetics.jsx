@@ -1,10 +1,11 @@
 import ArrowUpRight from "@/app/components/Elements/ArrowUpRight";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function RoarCosmetics() {
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex flex-col justify-center items-center w-full">
       <div className="relative w-[100%] group">
         <Image
           src="/roar.png" // Replace with the correct path to your image
@@ -25,6 +26,12 @@ export default function RoarCosmetics() {
           </span>
         </a>
       </div>
+      <button
+        className="md:hidden mt-10 bg-blue-800 text-white rounded-2xl shadow-md
+      shadow-slate-600 px-4 py-1"
+      >
+        <Link href="https://roarcosmetics.com/"> Visit roarcosmetics.com</Link>
+      </button>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 import ArrowUpRight from "@/app/components/Elements/ArrowUpRight";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Lartfruite() {
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex flex-col justify-center items-center w-full">
       <div className="relative w-[100%] group">
         <Image
           src="/lartfruite.png" // Replace with the correct path to your image
@@ -15,7 +16,7 @@ export default function Lartfruite() {
           className="object-cover w-full h-auto opacity-50 rounded-lg transition-opacity duration-300 group-hover:opacity-70"
         />
         <a
-          href="lartfruite.com" // Replace with the correct URL
+          href="https://lartfruite.com/" // Replace with the correct URL
           target="_blank"
           rel="noopener noreferrer"
           className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -25,6 +26,12 @@ export default function Lartfruite() {
           </span>
         </a>
       </div>
+      <button
+        className="md:hidden mt-10 bg-blue-800 text-white rounded-2xl shadow-md
+      shadow-slate-600 px-4 py-1"
+      >
+        <Link href="https://lartfruite.com//">Visit lartfruite.com</Link>
+      </button>
     </div>
   );
 }

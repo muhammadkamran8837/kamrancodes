@@ -72,7 +72,9 @@ export default function Wordpress() {
             Configuration
           </p>
 
-          <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
+          <p className="text-sm mt-10 md:mt-3 mb-3 md:mb-1">
+            {selectedProjectDescription}
+          </p>
         </div>
 
         {SelectedComponent ? (
