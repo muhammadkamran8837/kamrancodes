@@ -22,10 +22,10 @@ const projectDescription = {
 };
 
 const projectNames = {
-  CryptoApp: "Crypto App",
-  EcommerceApp: "Ecommerce App",
-  SignatureApp: "Signature App",
-  WeatherApp: "Weather App",
+  CryptoApp: "CryptoApp",
+  EcommerceApp: "EcommerceApp",
+  SignatureApp: "SignatureApp",
+  WeatherApp: "WeatherApp",
 };
 
 export default function WebDevelopment() {
@@ -54,7 +54,6 @@ export default function WebDevelopment() {
             React.js | Node.js | Express.js | MongoDB OR Firebase | Next.js |
             Tailwindcss
           </p>
-
           <p className="text-sm mt-2 mb-3">{selectedProjectDescription}</p>
         </div>
 
