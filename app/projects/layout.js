@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row text-neutral-200 h-screen">
+    <div className="flex flex-col md:flex-row text-neutral-200 h-[100vh]">
       {/* Hamburger Menu for Mobile */}
       <div className="md:hidden p-4 bg-slate-900 flex justify-between items-center">
         <div className="font-bold text-xl">Projects</div>

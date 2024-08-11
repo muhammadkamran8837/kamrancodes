@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center h-full text-center text-neutral-400 gap-5">
+    <div className="flex flex-col items-center justify-center lg:h-full h-[85vh] text-center text-neutral-400 gap-5">
       <Image src="/illustration.png" width={300} height={300} alt="Logo" />
 
       <p className="text-xs">
